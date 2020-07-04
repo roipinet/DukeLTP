@@ -9,4 +9,4 @@ The Specialization is divided into 4 courses of at least 4 weeks each, and to he
 
 1. Course 1: Programming Foundations with JavaScript, HTML and CSS
   - Week 1: HTML and CSS fundamentals applied using CodePen to create a basic website.
-  - Week 2: Mainly image monipulation using JavaScript and Duke's own library. 
+  - Week 2: Mainly image manipulation using JavaScript and Duke's own library. 
