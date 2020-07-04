@@ -1,0 +1,33 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+.intro{
+  background-color: white;
+}
+
+h1{
+  text-align: center;
+}
+.movies{
+  background-color:#ffbf6b;
+}
+.series{
+  background-color:#66fa8e;
+}
+.books{
+  background-color:#66fae4;
+}
+.games{
+  background-color:#ae66fa;
+}
+.readyLi{
+  color:#1500d1;
+}
+.pendingLi{
+  color:#d10000;
+}
+
+h3{
+  text-align:center;
+}
