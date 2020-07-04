@@ -24,4 +24,5 @@ for (var pixel of fgImage.values()){
     else{
         output.setPixel(pixel.getX(),pixel.getY(), pixel);
     }
+}
 print(output);
