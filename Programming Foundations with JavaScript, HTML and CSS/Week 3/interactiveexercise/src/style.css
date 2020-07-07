@@ -1,0 +1,40 @@
+body {
+  background-color: #F3E8EE;
+}
+
+h1, h5 {
+  text-align: center;
+  color:#292F36;
+  font-family: Helvetica, sans-serif;
+}
+
+#instructions h2 {
+  color:#f564a9;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+#instructions p {
+  font-family: Helvetica, sans-serif;
+}
+
+.frenchlilacback{
+  background-color:#8D5A97;
+}
+.nyanzaback{
+  background-color:#DDFFD9;
+}
+.dessertsandback{
+  background-color:#ECC8AE;
+}
+.middleredback{
+  background-color:#D7907B;
+}
+.rustback{
+  background-color:#A63C06;
+}
+.metallicseaweedback{
+  background-color:#00798C;
+}
+
+
