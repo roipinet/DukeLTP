@@ -1,0 +1,19 @@
+<script src='http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js'></script>
+<h1>Welcome to the green screen composite maker!</h1>
+<canvas id="fgCanvas">
+</canvas>
+<canvas id="bgCanvas">
+</canvas>
+<canvas id="compCanvas">
+</canvas>
+Foreground:<input type="file" id="fgInput" multiple="false" accept="images/*" onchange="loadForegroundImage()">
+
+<br>
+Background:
+<input type="file" id="bgInput" multiple="false" accept="images/*" onchange="loadBackgroundImage()">
+
+<br>
+
+<input type="button" id="createButton" value="Create Composite" onclick=doGreenScreen()>
+
+<input type="button" id="clearButton" value="Clear Canvases" onclick=clearCanvas()>
