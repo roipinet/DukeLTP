@@ -1,0 +1,18 @@
+<script src='http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js'></script>
+<h1>Image Filtering</h1>
+
+<h3>Instructions</h3>
+<p>Upload an image using the buttons below, then click on the corresponding filter buttons to filter your image. Return to the original image by pressing the Reset button.</p>
+
+<canvas id="myCanvas">
+</canvas>
+
+<input type="file" id="imageInput" multiple="false" accept="image/*" onchange="upload()">
+
+<input type="button" id="negativeFilter" onclick="doNegative()" value="Negative">
+
+<input type="button" id="grayscaleFilter" onclick="doGrayscale()" value="Grayscale">
+
+<input type="button" id="binaryFilter" onclick="doBinary()" value="Binary">
+
+<input type="button" id="resetFilter" onclick="doReset()" value="Reset">
