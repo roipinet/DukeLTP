@@ -116,7 +116,7 @@ public class PerimeterAssignmentRunner {
     }
 
     public void testPerimeter () {
-        FileResource fr = new FileResource();
+        FileResource fr = new FileResource("datatest1.txt");
         Shape s = new Shape(fr);
         double length = getPerimeter(s);
         int numPoints = getNumPoints(s);
@@ -148,7 +148,7 @@ public class PerimeterAssignmentRunner {
             System.out.println(p);
         }
         double peri = getPerimeter(triangle);
-        System.out.println("perimeter = "+peri);
+        System.out.println("perimeter = "+ peri);
     }
 
     // This method prints names of all files in a chosen folder that you can use to test your other methods
@@ -161,6 +161,7 @@ public class PerimeterAssignmentRunner {
 
     public static void main (String[] args) {
         PerimeterAssignmentRunner pr = new PerimeterAssignmentRunner();
-        pr.testPerimeter();
+        //pr.testPerimeter();
+        pr.testFileWithLargestPerimeter();
     }
 }
