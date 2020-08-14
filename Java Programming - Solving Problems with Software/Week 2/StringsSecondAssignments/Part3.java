@@ -21,7 +21,7 @@ public class Part3 {
                 currentIndex++;
             }
         }
-        return dna.length();
+        return -1;
     }
     
     public void testFindStopCodon(){
@@ -48,6 +48,7 @@ public class Part3 {
         //Find the first ATG
         int firstATG = dna.indexOf("ATG");
         if(firstATG != -1){
+            System.out.println("ATG found at " + firstATG);
             //Find the first occurence of TAA.
             int firstTAA = findStopCodon(dna, firstATG, "TAA");
             //Find the first occurence of TAG
@@ -55,17 +56,18 @@ public class Part3 {
             //Find the first occurence of TGA
             int firstTGA = findStopCodon(dna, firstATG, "TGA");
             //Calculate distances
-            int bestDistance = 0;
-            if(firstTAA < dna.length()){
+            int bestDistance = dna.length();
+            if(firstTAA != -1){
                 bestDistance = firstTAA - firstATG;
             }
-            if(firstTAG < dna.length() && (firstTAG - firstATG) < bestDistance){
+            if(firstTAG != -1 && (firstTAG - firstATG) < bestDistance){
                 bestDistance = firstTAG - firstATG;
             }
-            if(firstTGA < dna.length() && (firstTGA - firstATG) < bestDistance){
+            if(firstTGA != -1 && (firstTGA - firstATG) < bestDistance){
                 bestDistance = firstTGA - firstATG;
             }
-            if(bestDistance > 0){
+            if(bestDistance > 0 && bestDistance < dna.length()){
+                System.out.println("Gene found: " + dna.substring(firstATG, firstATG+bestDistance+3));
                 return dna.substring(firstATG, firstATG+bestDistance+3);
             }
             else{
@@ -121,14 +123,15 @@ public class Part3 {
         //Traverse the string
         for(int i = 0;i < dna.length();i++){
             String nextGene = findGene(dna.substring(i));
+            System.out.println("Looking from index " + i);
             if(nextGene != ""){
                 int nextGeneIndex = dna.indexOf(nextGene, i);
                 int nextGeneLength = nextGene.length();
                 if(nextGeneIndex != -1){
                     counter++;
                     int temp = i;
-                    i = nextGeneIndex+nextGeneLength;
-                    System.out.println("Found gene " + nextGene + " at index " + temp + " remaining string: " + dna.substring(i));
+                    i = nextGeneIndex+nextGeneLength-1;
+                    System.out.println("Found gene " + nextGene + " at index " + temp + " remaining string: " + dna.substring(i+1));
                 }
             }
         }

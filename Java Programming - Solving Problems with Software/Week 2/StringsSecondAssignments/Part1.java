@@ -45,7 +45,7 @@ public class Part1 {
         System.out.println("Test 5 (Length = " + test5.length() + "): " + findStopCodon(test5, 10, "TAA"));
     }
     
-    public String findGene(String dna){
+public String findGene(String dna){
         //Find the first ATG
         int firstATG = dna.indexOf("ATG");
         if(firstATG != -1){
@@ -56,17 +56,17 @@ public class Part1 {
             //Find the first occurence of TGA
             int firstTGA = findStopCodon(dna, firstATG, "TGA");
             //Calculate distances
-            int bestDistance = 0;
-            if(firstTAA < dna.length()){
+            int bestDistance = dna.length();
+            if(firstTAA != -1){
                 bestDistance = firstTAA - firstATG;
             }
-            if(firstTAG < dna.length() && (firstTAG - firstATG) < bestDistance){
+            if(firstTAG != -1 && (firstTAG - firstATG) < bestDistance){
                 bestDistance = firstTAG - firstATG;
             }
-            if(firstTGA < dna.length() && (firstTGA - firstATG) < bestDistance){
+            if(firstTGA != -1 && (firstTGA - firstATG) < bestDistance){
                 bestDistance = firstTGA - firstATG;
             }
-            if(bestDistance > 0){
+            if(bestDistance > 0 && bestDistance < dna.length()){
                 return dna.substring(firstATG, firstATG+bestDistance+3);
             }
             else{
