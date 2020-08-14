@@ -48,7 +48,7 @@ public class Part3 {
         //Find the first ATG
         int firstATG = dna.indexOf("ATG");
         if(firstATG != -1){
-            System.out.println("ATG found at " + firstATG);
+            //System.out.println("ATG found at " + firstATG);
             //Find the first occurence of TAA.
             int firstTAA = findStopCodon(dna, firstATG, "TAA");
             //Find the first occurence of TAG
@@ -140,5 +140,7 @@ public class Part3 {
     public void testCountGenes(){
         //Test 1: 2.
         System.out.println("Test 1: " + countGenes("ATGTAAGATGCCCTAGT"));
+        //Test 2:
+        System.out.println("Test 1: " + countGenes("AATGCTAACTAGCTGACTAAT"));
     }
 }
